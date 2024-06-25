@@ -445,7 +445,7 @@ void nativeNfcLlcp_ConnLessStopServer()
 {
     NXPLOG_API_D ("%s: enter\n", __FUNCTION__);
     NFA_P2pDeregister(sLlcpConnLessServerHandle);
-    sLlcpConnLessServerHandle = NULL;
+    sLlcpConnLessServerHandle = 0;
     bDestSap = 0x00;
     dwLlcpReadLength = 0x00;
     blMoreDataRemaining = 0x00;
@@ -459,7 +459,7 @@ void nativeNfcLlcp_ConnLessDeregisterClientCallback()
 {
     NXPLOG_API_D ("%s: enter\n", __FUNCTION__);
     NFA_P2pDeregister(sLlcpConnLessClientHandle);
-    sLlcpConnLessClientHandle = NULL;
+    sLlcpConnLessClientHandle = 0;
     bDestSap = 0x00;
     dwLlcpReadLength = 0x00;
     blMoreDataRemaining = 0x00;
