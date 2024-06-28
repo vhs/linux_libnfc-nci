@@ -6,4 +6,8 @@ if [ -f ./configure ] && [ "$1" != "-f" ]; then
     exit
 fi
 
-./bootstrap
+if [ "$1" = "-f" ]; then
+    shift
+fi
+
+./bootstrap && exec "$@"
